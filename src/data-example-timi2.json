@@ -1,0 +1,49 @@
+{
+  "array": [
+    {
+      "id": "1",
+      "verticalOccupation": 2,
+      "horizontalOccupation": 1
+    },
+    {
+      "id": "2",
+      "verticalOccupation": 1,
+      "horizontalOccupation": 2
+    },
+    {
+      "id": "3",
+      "verticalOccupation": 2,
+      "horizontalOccupation": 1
+    },
+    {
+      "id": "4",
+      "verticalOccupation": 1,
+      "horizontalOccupation": 1
+    },
+    {
+      "id": "5",
+      "verticalOccupation": 2,
+      "horizontalOccupation": 1
+    },
+    {
+      "id": "6",
+      "verticalOccupation": 1,
+      "horizontalOccupation": 1
+    },
+    {
+      "id": "7",
+      "verticalOccupation": 1,
+      "horizontalOccupation": 1
+    },
+    {
+      "id": "8",
+      "verticalOccupation": 1,
+      "horizontalOccupation": 1
+    },
+    {
+      "id": "9",
+      "verticalOccupation": 1,
+      "horizontalOccupation": 1
+    }
+  ]
+}

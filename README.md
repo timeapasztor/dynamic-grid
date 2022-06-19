@@ -1,46 +1,40 @@
-# Getting Started with Create React App
+# Dynamic Grid Task
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Setup
 
-## Available Scripts
+- Fork this task and work on the forked one
+- After the task completion, forward to us forked sandbox
 
-In the project directory, you can run:
+## Task explanation
 
-### `npm start`
+Create a dynamical grid dimensions 3x3 and populate it in order with elements based on the given json('data-example01.json' file inside src folder).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Using tables as a solution won't be considered as valid.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Elements can occupy different placements:
 
-### `npm test`
+- 1 horizontal position, 1 vertical position with dimensions width: 20px and height: 20px
+- 2 horizontal positions, 1 vertical position with dimensions width: 40px and height: 20px
+- 1 horizontal position, 2 vertical position with dimenstions width: 20px and height: 40px
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Gap between elements should be 12px.
 
-### `npm run build`
+Elements should occupy first available placement in the grid that satisfies their dimension requirements.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+When you reach an element that cannot be placed in the grid, stop populating the grid.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Solution should support any type of data configuration, meaning that this should support 'data-example01.json', 'data-example02.json', 'data-example03.json'
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+For example:
+Ideally it would look like
+![alt text](./Dynamical_grid-example01.png "Grid view 01")
 
-### `npm run eject`
+other cases
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![alt text](./Dynamical_grid-example02.png "Grid view 02")
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![alt text](./Dynamical_grid-example03.png "Grid view 03")
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+While working on the task, document what is your approach in solving it.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+After sending us back the task, if you have any additional input that could contribute to the task completion, send it to us before the task presentation.
