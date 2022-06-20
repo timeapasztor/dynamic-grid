@@ -1,5 +1,13 @@
 import styled from 'styled-components';
 
+export const GridWrapper = styled.div`
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 20px 20px 20px;
+    grid-template-rows: 20px 20px 20px;
+    gap: 12px;
+`;
+
 export const Placeholder = styled.div`
   width: 0;
   height: 0;

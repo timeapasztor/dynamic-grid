@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
 import testtimi from "./data-example-timi.json";
-// import testtimi2 from "./data-example-timi2.json";
+import testtimi2 from "./data-example-timi2.json";
 // import test1 from "./data-example01.json";
 // import test2 from "./data-example02.json";
 // import test3 from "./data-example03.json";
-import {HRectangle, Placeholder, Square, VRectangle} from './StyledComponents.css';
+import {GridWrapper, HRectangle, Placeholder, Square, VRectangle} from './StyledComponents.css';
 
 function App() {
 
@@ -15,7 +15,7 @@ function App() {
 // 2 horizontal position, 1 vertical position = 3
 
   const helper: any[] = [];
-  let data = testtimi;
+  let data = testtimi2;
   if (data.array.length > 0) {
     // I iterate through the array and prepare one array with the cases
     data.array.forEach((item) => {
@@ -30,7 +30,6 @@ function App() {
       }
     })
   }
-  console.log('helper', helper);
   // one dimensional array <- to build up the blocks and reserve the spaces
   const special = [0, 0, 0, 0, 0, 0, 0, 0, 0];
   const edit = [0, 0, 0, 0, 0, 0, 0, 0, 0];
@@ -68,13 +67,10 @@ function App() {
     }
   })
   //special: [2, 1, 1, 2, 3, 3, 1, 1, 1] (in testtimi case)
-  console.log('special', special);
   // if array is longer and the grid is 3x3, I need only the first 9
   const slicedArray = edit.slice(0, 9);
-  console.log('sliced', slicedArray);
   // edit is for: removing the partner-elements value and put 0 instead
   // edit: [2, 1, 1, 0, 3, 0, 1, 1, 1] (in testtimi case)
-  console.log('edit', edit);
   const firstRow = edit.slice(0, 3);
   const secondRow = edit.slice(3, 6);
   const thirdRow = edit.slice(6, 9);
@@ -82,7 +78,6 @@ function App() {
   // [2, 1, 1]
   // [0, 3, 0]
   // [1, 1, 1] (in testtimi case)
-  console.log('FINAL', finalGrid);
 
   const elements: any[] = [];
   const renderShapes = (shape: any, index: any) => {
@@ -137,7 +132,7 @@ function App() {
   return (
     <div className="App">
       <h1>Dynamic Grid Task</h1>
-      <div style={{ justifyContent: 'center', display: 'grid', gridTemplateColumns: '32px 32px 32x', gridTemplateRows: '32px 32px 32x', gap: '12px' }}>{elements}</div>
+      <GridWrapper>{elements}</GridWrapper>
     </div>
   );
 }
